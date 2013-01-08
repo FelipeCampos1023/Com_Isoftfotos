@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+  <name>Sandra Galery</name>
+	<author>Felipe Campos</author>
+	<creationDate>January 2013</creationDate>
+	<copyright>(C) Imperium Design. All rights reserved.
+	</copyright>
+	<license>GNU General Public License version 2 or later; see
+		LICENSE.txt</license>
+	<authorEmail>felipe@imperiumdesign.com.br</authorEmail>
+	<authorUrl>www.imperiumdesign.com.br</authorUrl>
+	<version>3.0.0</version>
+	<description>COM_ISOFTFOTOS_XML_DESCRIPTION</description>
+
+	<install> <!-- Runs on install -->
+    	<sql>
+        	<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+  		</sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+    	<sql>
+        	<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+  		</sql>
+   </uninstall>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>isoftfotos.php</filename>
+		<filename>controller.php</filename>
+		<filename>router.php</filename>
+		<filename>metadata.xml</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+	</files>
+	
+	<administration>
+		<menu img="class:isoftfotos">com_isoftfotos</menu>
+    <submenu>
+			
+			<menu link="option=com_isoftfotos" view="fotos" img="class:isoftfotos"
+				alt="Isoftfotos/Fotos">com_isoftfotos_fotos</menu>
+			<menu link="option=com_isoftfotos&amp;view=albuns"
+				view="categories" img="class:Isoftfotos-albuns" alt="Isoftfotos/Albuns">com_isoftfotos_albuns</menu>
+			<menu link="option=com_isoftfotos&amp;view=eventos"
+			view="categories" img="class:Isoftfotos-eventos" alt="Isoftfotos/Eventos">com_isoftfotos_eventos</menu>
+			<menu link="option=com_isoftfotos&amp;view=parceiros"
+			view="categories" img="class:Isoftfotos-parceiros" alt="Isoftfotos/Parceiros">com_isoftfotos_parceiros</menu>
+			<menu link="option=com_isoftfotos&amp;view=pedidos"
+			view="categories" img="class:Isoftfotos-pedidos" alt="Isoftfotos/Pedidos">com_isoftfotos_pedidos</menu>
+	   </submenu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>isoftfotos.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		
+	</administration>
+</extension>
+
